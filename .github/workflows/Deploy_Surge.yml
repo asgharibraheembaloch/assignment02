@@ -44,4 +44,4 @@ jobs:
         uses: linchpin/action-build-yarn-npm@master
         
       - name: Deploy to surge
-        run: surge ./build assignment-asghar.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build bootcamp_assignment02_asghar.surge.sh --token ${{ secrets.SURGE_TOKEN }}
