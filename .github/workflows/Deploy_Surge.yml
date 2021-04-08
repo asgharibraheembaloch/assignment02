@@ -40,8 +40,8 @@ jobs:
       - name: install surge
         run: npm install --global surge
         
-      - name: build the app
-        run: yarn build
+      - name: Build Yarn and npm
+        uses: linchpin/action-build-yarn-npm@master
         
       - name: Deploy to surge
         run: surge ./build assignment-asghar.surge.sh --token ${{secrets.SURGE_TOKEN}}
