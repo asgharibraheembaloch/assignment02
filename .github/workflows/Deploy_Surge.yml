@@ -41,7 +41,7 @@ jobs:
         run: npm install --global surge
         
       - name: Build Yarn and npm
-        run: yarn build
+        run: sudo yarn build
         
       - name: Deploy to surge
         run: surge ./build bootcamp_assignment02_asghar.surge.sh --token ${{ secrets.SURGE_TOKEN }}
