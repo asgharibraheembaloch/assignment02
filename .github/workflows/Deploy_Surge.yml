@@ -41,7 +41,7 @@ jobs:
         run: npm install --global surge
         
       - name: Build Yarn and npm
-        uses: linchpin/action-build-yarn-npm@master
+        run: yarn build
         
       - name: Deploy to surge
         run: surge ./build bootcamp_assignment02_asghar.surge.sh --token ${{ secrets.SURGE_TOKEN }}
